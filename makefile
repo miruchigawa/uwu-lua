@@ -96,8 +96,8 @@ AUX_O=	lauxlib.o
 LIB_O=	lbaselib.o ldblib.o liolib.o lmathlib.o loslib.o ltablib.o lstrlib.o \
 	lutf8lib.o loadlib.o lcorolib.o linit.o
 
-LUA_T=	lua
-LUA_O=	lua.o
+LUA_T=	wua	
+LUA_O=	wua.o
 
 
 ALL_T= $(CORE_T) $(LUA_T)
@@ -118,12 +118,18 @@ $(CORE_T): $(CORE_O) $(AUX_O) $(LIB_O)
 $(LUA_T): $(LUA_O) $(CORE_T)
 	$(CC) -o $@ $(MYLDFLAGS) $(LUA_O) $(CORE_T) $(LIBS) $(MYLIBS) $(DL)
 
+install: 
+	mv -i $(LUA_T) /usr/local/bin
+
+uninstall:
+	$(RM) /usr/local/$(LUA_T)
 
 clean:
 	$(RM) $(ALL_T) $(ALL_O)
 
 depend:
 	@$(CC) $(CFLAGS) -MM *.c
+
 
 echo:
 	@echo "CC = $(CC)"
@@ -196,7 +202,7 @@ ltests.o: ltests.c lprefix.h lua.h luaconf.h lapi.h llimits.h lstate.h \
  ltable.h lualib.h
 ltm.o: ltm.c lprefix.h lua.h luaconf.h ldebug.h lstate.h lobject.h \
  llimits.h ltm.h lzio.h lmem.h ldo.h lgc.h lstring.h ltable.h lvm.h
-lua.o: lua.c lprefix.h lua.h luaconf.h lauxlib.h lualib.h
+lua.o: wua.c lprefix.h lua.h luaconf.h lauxlib.h lualib.h
 lundump.o: lundump.c lprefix.h lua.h luaconf.h ldebug.h lstate.h \
  lobject.h llimits.h ltm.h lzio.h lmem.h ldo.h lfunc.h lstring.h lgc.h \
  lundump.h

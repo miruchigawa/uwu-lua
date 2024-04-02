@@ -1,7 +1,13 @@
-# Lua
+# UwU Lua
+Custom lua language with UwU Syntax
 
-This is the repository of Lua development code, as seen by the Lua team. It contains the full history of all commits but is mirrored irregularly. For complete information about Lua, visit [Lua.org](https://www.lua.org/).
+## Example
+```
+whiwe true do 
+    print("Hewwo Wowwd :3")
+end
+```
 
-Please **do not** send pull requests. To report issues, post a message to the [Lua mailing list](https://www.lua.org/lua-l.html).
+Or see at [test/main.wua](test/main.wua)
 
-Download official Lua releases from [Lua.org](https://www.lua.org/download.html).
+Keywords on wua: and, break, do, if, ewse, ewseif, and, true, fawse, fow, fn, goto, if, in, local, nil, nyot, or, repeat, wetuwn, then, untiw, whiwe

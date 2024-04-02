@@ -29,7 +29,7 @@
 
 
 /* mark for precompiled code ('<esc>Lua') */
-#define LUA_SIGNATURE	"\x1bLua"
+#define LUA_SIGNATURE	"\x1bLua UwU"
 
 /* option for multiple returns in 'lua_pcall' and 'lua_call' */
 #define LUA_MULTRET	(-1)
@@ -520,7 +520,7 @@ struct lua_Debug {
 #define LUA_VERSION_MINOR	LUAI_TOSTR(LUA_VERSION_MINOR_N)
 #define LUA_VERSION_RELEASE	LUAI_TOSTR(LUA_VERSION_RELEASE_N)
 
-#define LUA_VERSION	"Lua " LUA_VERSION_MAJOR "." LUA_VERSION_MINOR
+#define LUA_VERSION	"UwU Lua " LUA_VERSION_MAJOR "." LUA_VERSION_MINOR
 #define LUA_RELEASE	LUA_VERSION "." LUA_VERSION_RELEASE
 
 

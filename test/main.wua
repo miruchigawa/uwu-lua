@@ -1,0 +1,13 @@
+fn main()
+    print("Hewwo Wowwd :3")
+end
+local countew = 0
+
+whiwe countew <= 10 do
+    main()
+    countew = countew + 1
+end
+
+if nyot fawse then
+    print("Oh nyo")
+end
